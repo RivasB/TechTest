@@ -19,7 +19,7 @@ target/
 *.iml
 *.ipr
 
-### NetBeans ###
+### NetBeans ####
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -31,8 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-src/cloudservices/config/nbactions.xml
-src/cloudservices/gateway/nbactions.xml
-src/cloudservices/registry/nbactions.xml
-src/microservices/document/nbactions.xml
-.DS_Store

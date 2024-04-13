@@ -1,0 +1,46 @@
+name: ci-registry
+
+env:
+  KUBECONFIG: ./kubeconfig.yaml
+  SERVICE_PATH: 'src/cloudservices/registry'
+  SERVICE_NAME: 'registry'
+
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - .github/workflows/registry.yml
+      - 'src/cloudservices/registry/**'
+
+jobs:
+  build-push:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v3
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      -
+        name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v4
+        with:
+          build-args: |
+            PACKAGE_TOKEN=${{ secrets.PACKAGE_TOKEN }}
+            CONFIG_URI=${{ secrets.CONFIG_URI }}
+            CONFIG_SECURITY_USER=${{ secrets.CONFIG_SECURITY_USER }}
+            CONFIG_SECURITY_PASS=${{ secrets.CONFIG_SECURITY_PASS }}
+          context: "{{defaultContext}}:${{ env.SERVICE_PATH }}"
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.HUB_NAMESPACE }}-${{ env.SERVICE_NAME }}:v1
