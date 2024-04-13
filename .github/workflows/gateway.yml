@@ -37,7 +37,11 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           build-args: |
-            "PACKAGE_TOKEN=${{secrets.PACKAGE_TOKEN}}"
+            PACKAGE_TOKEN=${{ secrets.PACKAGE_TOKEN }}
+            CONFIG_URI=${{ secrets.CONFIG_URI }}
+            CONFIG_SECURITY_USER=${{ secrets.CONFIG_SECURITY_USER }}
+            CONFIG_SECURITY_PASS=${{ secrets.CONFIG_SECURITY_PASS }}
+            EUREKA_DEFAULT_ZONE=${{ secrets.EUREKA_DEFAULT_ZONE }}
           context: "{{defaultContext}}:${{ env.SERVICE_PATH }}"
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.HUB_NAMESPACE }}-${{ env.SERVICE_NAME }}:v1
