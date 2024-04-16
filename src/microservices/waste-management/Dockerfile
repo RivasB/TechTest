@@ -48,9 +48,9 @@ RUN mvn --no-transfer-progress clean package -DskipTests
 # FROM docker.io/oraclelinux:9-slim
 FROM bellsoft/liberica-openjdk-alpine:17.0.6
 
-EXPOSE 8083
+EXPOSE 8084
 
 # Copy the native executable into the containers
 WORKDIR /app
-COPY --from=builder /build/target/project-0.0.1-SNAPSHOT.jar .
-ENTRYPOINT [ "java", "-jar", "/app/project-0.0.1-SNAPSHOT.jar" ]
+COPY --from=builder /build/target/waste-management-0.0.1-SNAPSHOT.jar .
+ENTRYPOINT [ "java", "-jar", "/app/waste-management-0.0.1-SNAPSHOT.jar" ]
