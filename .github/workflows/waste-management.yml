@@ -3,7 +3,7 @@ name: ci-wastemanagement
 env:
   KUBECONFIG: ./kubeconfig.yaml
   SERVICE_PATH: 'src/microservices/wastemanagement'
-  SERVICE_NAME: 'project'
+  SERVICE_NAME: 'waste-management'
 
 on:
   push:
