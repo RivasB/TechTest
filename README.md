@@ -1,19 +1,26 @@
-#  Task Management Application  for Agile Teams [TTeams] - DDD, CleanArch and CQRS microservice cloud
+#  Technical Test [TTest] - DDD, CleanArch and CQRS microservice cloud
 
 ### Description ###
-TTeams is an application for task management in agile development environments. TTeams aims to cover all or most 
-of the requirements that must be present in a project in which agile methodologies are applied. It intuitively and 
-easily manages projects, tasks and teams and implements a series of functionalities that contribute to increasing the 
-productivity of the teams managed through it.
+Principales caracteristicas desarrolladas
 
-This project is a microservices cloud that implements the Domain Driven Design, Clean Arch, and Command 
-Query Responsibility Segregation architectural patterns. It also has CI/CD Continuous Integration through 
-Actions to facilitate the publication of the images of each microservice in a public Docker Hub repository. 
-In addition, the project has its docker-compose file for a quick start-up of the microservices cloud.
+Patrones de diseño y aquitectura: 
+
+-DDD(Desarrollo guiado por el dominio)
+
+-CQRS(Principio de segregación de Responsabilidades)
+
+-CleanArch(Arquitectura limpia o Hexagonal)
+
+-CI/CD utilizando GuitHub Actions
+
+-Dockerización de todo el proyecto
+
+-Documentación referente a la toima de decisiones en la carpeta "documentation"
+
 
 ### Project structure ###
 
-<img src="https://github.com/RivasB/TTeams/blob/main/project.png"/>
+<img src="https://github.com/RivasB/TechTest/blob/main/project.png"/>
 
 ### Install ###
 
@@ -22,21 +29,14 @@ git clone https://github.com/RivasB/TTeams.git
 cd ddd-microservices
 docker-compose up -d
 ```
-API runs under http://localhost:8091
+API en http://localhost:8091
 
-Check the Postman collection provided.
-
-The default credentials are:
-```
-{
-  identification: 0000000000,
-  password: Password*777
-}
+Se porvee una colección Postman
 ```
 
-OpenApi Documentation runs under http://localhost:8084/swagger-ui/index.html (auth free)
+OpenApi info en http://localhost:8091/v3/api-docs
 
-### Project docker repository  ###
+### Docker repository  ###
 
 https://hub.docker.com/repositories/rivasb
 
