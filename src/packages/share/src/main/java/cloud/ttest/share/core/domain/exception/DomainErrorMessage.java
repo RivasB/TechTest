@@ -491,7 +491,7 @@ public enum DomainErrorMessage implements IDomainErrorMessage {
 
     CITIZENSHIP_REGISTER_USER_REQUIRED(723, Series.DOMAIN_ERROR, "Citizenship user information required"),
 
-    CITIZENSHIP_DOCUMENT_REJECT_COMMENT_REQUIRED(724, Series.DOMAIN_ERROR, "Citizenship documentation reject comment required"),
+    CITIZENSHIP_DOCUMENT_REJECT_COMMENT_REQUIRED(724, Series.DOMAIN_ERROR, "Citizenship documentation reject wastemanager required"),
 
     CITIZENSHIP_STATE_INVALID(725, Series.DOMAIN_ERROR, "Invalid state"),
 

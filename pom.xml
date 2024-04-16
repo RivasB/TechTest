@@ -35,6 +35,8 @@
 		<module>src/cloudservices/config</module>
 		<module>src/cloudservices/registry</module>
 		<module>src/cloudservices/gateway</module>
+		<module>src/microservices/waste-management</module>
+		<module>src/microservices/waste-center-auth</module>
 		<module>src/packages/share</module>
 
 	</modules>

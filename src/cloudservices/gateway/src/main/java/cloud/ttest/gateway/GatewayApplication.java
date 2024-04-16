@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 
 @SpringBootApplication
-@OpenAPIDefinition
 public class GatewayApplication {
 
 	public static void main(String[] args) {
