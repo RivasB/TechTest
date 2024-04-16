@@ -4,13 +4,15 @@ import cloud.ttest.wastemanagement.shared.infrastructure.repository.hibernate.Au
 import cloud.ttest.wastemanagement.wastemanager.infrastructure.repository.hibernate.WasteManagerEntity;
 import cloud.ttest.wastemanagement.wastemanageraddress.domain.WasteManagerAddress;
 import jakarta.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name = "waste_manager_address")
 public class WasteManagerAddressEntity extends AuditableBase {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
     private Long id;
 
     @Column(nullable = false, length = 250)
@@ -51,7 +53,13 @@ public class WasteManagerAddressEntity extends AuditableBase {
         return isEnabled;
     }
 
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
+    public void setEnabled(Boolean enabled) {
+        isEnabled = enabled;
+    }
 
     public WasteManagerAddress toAggregate(){
         return new WasteManagerAddress(

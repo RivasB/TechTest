@@ -3,6 +3,8 @@ import cloud.ttest.wastemanagement.shared.infrastructure.repository.hibernate.Au
 import cloud.ttest.wastemanagement.wastemanager.domain.WasteManager;
 import cloud.ttest.wastemanagement.wastemanageraddress.infrastructure.repository.hibernate.WasteManagerAddressEntity;
 import jakarta.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
+
 import java.util.List;
 
 @Entity
@@ -10,7 +12,8 @@ import java.util.List;
 public class WasteManagerEntity extends AuditableBase {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
     private Long id;
 
     @Column(nullable = false, length = 250)
@@ -76,6 +79,26 @@ public class WasteManagerEntity extends AuditableBase {
 
     public Boolean getEnabled() {
         return isEnabled;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setNif(String nif) {
+        this.nif = nif;
+    }
+
+    public void setWasteManagerAddress(WasteManagerAddressEntity wasteManagerAddress) {
+        this.wasteManagerAddress = wasteManagerAddress;
+    }
+
+    public void setListOfWasteCenterAuthorizationIds(List<Long> listOfWasteCenterAuthorizationIds) {
+        this.listOfWasteCenterAuthorizationIds = listOfWasteCenterAuthorizationIds;
+    }
+
+    public void setEnabled(Boolean enabled) {
+        isEnabled = enabled;
     }
 
     public WasteManager toAggregate() {
