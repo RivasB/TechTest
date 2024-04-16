@@ -26,12 +26,12 @@ Patrones de diseño y aquitectura:
 
 ```
 git clone https://github.com/RivasB/TTeams.git
-cd ddd-microservices
+cd TechTest
 docker-compose up -d
 ```
 API en http://localhost:8091
 
-Se porvee una colección Postman
+Se porveen colecciónes Postman
 ```
 
 OpenApi info en http://localhost:8091/v3/api-docs
