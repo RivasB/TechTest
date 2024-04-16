@@ -1,7 +1,6 @@
 package cloud.ttest.wastemanagement.wastemanageraddress.application.command.create;
 
 import cloud.ttest.share.core.domain.bus.command.ICommandHandler;
-import cloud.ttest.wastemanagement.wastemanager.domain.WasteManager;
 import cloud.ttest.wastemanagement.wastemanageraddress.domain.WasteManagerAddress;
 import cloud.ttest.wastemanagement.wastemanageraddress.domain.service.IWasteManagerAddressDomainService;
 import org.springframework.stereotype.Component;

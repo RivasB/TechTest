@@ -3,8 +3,6 @@ package cloud.ttest.wastemanagement.wastemanageraddress.infrastructure.adapter.q
 
 
 import cloud.ttest.share.core.domain.MessagePaginatedResponse;
-import cloud.ttest.wastemanagement.wastemanager.application.WasteManagerResponse;
-import cloud.ttest.wastemanagement.wastemanager.infrastructure.repository.hibernate.WasteManagerEntity;
 import cloud.ttest.wastemanagement.wastemanageraddress.application.WasteManagerAddressResponse;
 import cloud.ttest.wastemanagement.wastemanageraddress.domain.WasteManagerAddress;
 import cloud.ttest.wastemanagement.wastemanageraddress.domain.repository.IWasteManagerAddressQueryRepository;

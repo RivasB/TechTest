@@ -3,8 +3,6 @@ package cloud.ttest.wastemanagement.wastemanageraddress.application.command.crea
 import cloud.ttest.share.core.domain.bus.command.ICommand;
 import cloud.ttest.share.core.domain.bus.command.ICommandMessage;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class CreateWasteManagerAddressCommand implements ICommand {
     private final String address;

@@ -3,7 +3,6 @@ package cloud.ttest.wastemanagement.wastemanageraddress.application.command.crea
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
-import java.util.List;
 
 public class CreateWasteManagerAddressRequest {
     @NotBlank(message = "Address can not be empty")
