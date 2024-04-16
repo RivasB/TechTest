@@ -1,8 +1,7 @@
 package cloud.ttest.wastecenterauth.wastecenterauthorization.application.query.getbylist;
 
+import cloud.ttest.share.core.application.GetByListWasteCenterAuthorizationResponse;
 import cloud.ttest.share.core.domain.bus.query.IQueryHandler;
-import cloud.ttest.wastecenterauth.wastecenterauthorization.application.WasteCenterAuthorizationResponse;
-import cloud.ttest.wastecenterauth.wastecenterauthorization.application.query.getbyid.GetByIdWasteCenterAuthorizationQuery;
 import cloud.ttest.wastecenterauth.wastecenterauthorization.domain.WasteCenterAuthorization;
 import cloud.ttest.wastecenterauth.wastecenterauthorization.domain.service.IWasteCenterAuthorizationDomainService;
 import org.springframework.stereotype.Component;

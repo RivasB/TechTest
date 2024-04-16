@@ -5,6 +5,7 @@ import cloud.ttest.wastemanagement.wastemanageraddress.application.WasteManagerA
 import cloud.ttest.wastemanagement.wastemanageraddress.domain.WasteManagerAddress;
 import cloud.ttest.wastemanagement.wastemanageraddress.domain.service.IWasteManagerAddressDomainService;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 
 @Component
@@ -18,6 +19,7 @@ public class GetByIdWasteManagerAddressQueryHandler implements IQueryHandler<Get
     }
 
     @Override
+    @Transactional
     public WasteManagerAddressResponse handle(GetByIdWasteManagerAddressQuery query) {
         WasteManagerAddress responseEntity = wasteManagerAddressDomainService.findById(query.getId());
         return new WasteManagerAddressResponse(responseEntity);

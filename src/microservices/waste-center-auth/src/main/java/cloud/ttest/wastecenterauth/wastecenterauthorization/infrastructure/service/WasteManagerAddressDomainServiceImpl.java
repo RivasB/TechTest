@@ -30,24 +30,24 @@ public class WasteManagerAddressDomainServiceImpl implements IWasteCenterAuthori
     @Override
     public WasteCenterAuthorization create(WasteCenterAuthorization wasteCenterAuthorization) {
         WasteCenterAuthorization persisted = commandRepository.create(wasteCenterAuthorization);
-        logger.info(String.format("The Waste Manager Address with id %s was created successfully.",
-                wasteCenterAuthorization.getId()));
+        logger.info(String.format("The Waste Center Authorization with number %s was created successfully.",
+                wasteCenterAuthorization.getAuthorizationNumber()));
         return persisted;
     }
 
     @Override
     public WasteCenterAuthorization update(WasteCenterAuthorization wasteCenterAuthorization) {
         WasteCenterAuthorization updated = commandRepository.update(wasteCenterAuthorization);
-        logger.info(String.format("The Waste Manager Address with id %s was updated successfully.",
-                wasteCenterAuthorization.getId()));
+        logger.info(String.format("The Waste Center Authorization with number %s was updated successfully.",
+                wasteCenterAuthorization.getAuthorizationNumber()));
         return updated;
     }
 
     @Override
     public void delete(WasteCenterAuthorization wasteCenterAuthorization) {
         commandRepository.delete(wasteCenterAuthorization);
-        logger.info(String.format("The Waste Manager Address with id %s was deleted successfully.",
-                wasteCenterAuthorization.getId()));
+        logger.info(String.format("The Waste Center Authorization with number %s was deleted successfully.",
+                wasteCenterAuthorization.getAuthorizationNumber()));
     }
 
     @Override
@@ -62,6 +62,7 @@ public class WasteManagerAddressDomainServiceImpl implements IWasteCenterAuthori
 
     @Override
     public List<WasteCenterAuthorization> getByList(List<Long> ids) {
+        logger.info("A List of authorization numbers was requested by waste-management-microservice");
         return queryRepository.findByList(ids);
     }
 

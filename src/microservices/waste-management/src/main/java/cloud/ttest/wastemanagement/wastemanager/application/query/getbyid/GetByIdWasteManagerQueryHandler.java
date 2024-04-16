@@ -6,6 +6,7 @@ import cloud.ttest.wastemanagement.wastemanager.domain.WasteManager;
 import cloud.ttest.wastemanagement.wastemanager.domain.service.IWasteManagerDomainService;
 import cloud.ttest.wastemanagement.wastemanager.infrastructure.adapter.service.http.IWasteCenterAuthHttpClient;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -22,6 +23,7 @@ public class GetByIdWasteManagerQueryHandler implements IQueryHandler<GetByIdWas
     }
 
     @Override
+    @Transactional
     public WasteManagerResponse handle(GetByIdWasteManagerQuery query) {
         WasteManager responseEntity = wasteManagerDomainService.findById(query.getId());
         List<String> authList =

@@ -26,7 +26,7 @@ public class WasteManagerEntity extends AuditableBase {
     @JoinColumn(name = "address_id", referencedColumnName = "id")
     private WasteManagerAddressEntity wasteManagerAddress;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "waste_center_authorizations", joinColumns = @JoinColumn(name = "waste_manager_id"))
     @Column(name = "authorization_id")
     private List<Long> listOfWasteCenterAuthorizationIds;

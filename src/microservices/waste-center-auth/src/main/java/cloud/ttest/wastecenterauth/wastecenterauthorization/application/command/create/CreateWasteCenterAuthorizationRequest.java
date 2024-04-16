@@ -7,8 +7,10 @@ import jakarta.validation.constraints.NotNull;
 public class CreateWasteCenterAuthorizationRequest {
     @NotBlank(message = "Authorization Number can not be empty")
     @NotNull(message = "Authorization Number is required")
-    private final String authorizationNumber;
+    private String authorizationNumber;
 
+    public CreateWasteCenterAuthorizationRequest() {
+    }
 
     public CreateWasteCenterAuthorizationRequest(String authorizationNumber) {
         this.authorizationNumber = authorizationNumber;

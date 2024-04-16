@@ -1,6 +1,8 @@
 package cloud.ttest.wastemanagement.wastemanager.infrastructure.adapter.service.http;
 
 
+import cloud.ttest.share.core.application.GetByListWasteCenterAuthorizationRequest;
+import cloud.ttest.share.core.application.GetByListWasteCenterAuthorizationResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,8 +13,8 @@ public class WasteCenterAuthHttpClientFallBack implements IWasteCenterAuthFeignC
     private static final Logger logger = LoggerFactory.getLogger(WasteCenterAuthHttpClientImpl.class);
 
     @Override
-    public WasteCenterAuthResponse callGetAuthNumbers(WasteCenterAuthRequest request) {
+    public GetByListWasteCenterAuthorizationResponse callGetAuthNumbers(GetByListWasteCenterAuthorizationRequest request) {
         logger.error("Unable to get authorization numbers. Launching FallBack");
-        return new WasteCenterAuthResponse(new ArrayList<>());
+        return new GetByListWasteCenterAuthorizationResponse(new ArrayList<>());
     }
 }

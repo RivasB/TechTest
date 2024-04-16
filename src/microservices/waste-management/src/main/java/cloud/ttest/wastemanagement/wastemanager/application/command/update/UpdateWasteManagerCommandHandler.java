@@ -6,6 +6,7 @@ import cloud.ttest.wastemanagement.wastemanager.domain.service.IWasteManagerDoma
 import cloud.ttest.wastemanagement.wastemanageraddress.domain.WasteManagerAddress;
 import cloud.ttest.wastemanagement.wastemanageraddress.domain.service.IWasteManagerAddressDomainService;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -23,6 +24,7 @@ public class UpdateWasteManagerCommandHandler implements ICommandHandler<UpdateW
 
 
     @Override
+    @Transactional
     public void handle(UpdateWasteManagerCommand command) {
         WasteManager toUpdate = wasteManagerDomainService.findById(command.getId());
         String updatedName = command.getName() !=null ? command.getName() : toUpdate.getName();

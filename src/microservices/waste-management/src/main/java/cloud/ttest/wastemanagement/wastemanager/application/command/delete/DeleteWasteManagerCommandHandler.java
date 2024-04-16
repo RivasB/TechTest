@@ -4,6 +4,7 @@ import cloud.ttest.share.core.domain.bus.command.ICommandHandler;
 import cloud.ttest.wastemanagement.wastemanager.domain.WasteManager;
 import cloud.ttest.wastemanagement.wastemanager.domain.service.IWasteManagerDomainService;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 @Component
 public class DeleteWasteManagerCommandHandler implements ICommandHandler<DeleteWasteManagerCommand> {
@@ -15,6 +16,7 @@ public class DeleteWasteManagerCommandHandler implements ICommandHandler<DeleteW
     }
 
     @Override
+    @Transactional
     public void handle(DeleteWasteManagerCommand command) {
         WasteManager toDelete = wasteManagerDomainService.findById(command.getId());
         wasteManagerDomainService.delete(toDelete);

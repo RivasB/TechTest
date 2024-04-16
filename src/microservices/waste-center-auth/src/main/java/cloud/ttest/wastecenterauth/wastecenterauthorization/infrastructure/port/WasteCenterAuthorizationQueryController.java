@@ -8,8 +8,8 @@ import cloud.ttest.wastecenterauth.wastecenterauthorization.application.query.ge
 import cloud.ttest.wastecenterauth.wastecenterauthorization.application.query.getbyid.GetByIdWasteCenterAuthorizationQuery;
 import cloud.ttest.wastecenterauth.wastecenterauthorization.application.WasteCenterAuthorizationResponse;
 import cloud.ttest.wastecenterauth.wastecenterauthorization.application.query.getbylist.GetByListWasteCenterAuthorizationQuery;
-import cloud.ttest.wastecenterauth.wastecenterauthorization.application.query.getbylist.GetByListWasteCenterAuthorizationRequest;
-import cloud.ttest.wastecenterauth.wastecenterauthorization.application.query.getbylist.GetByListWasteCenterAuthorizationResponse;
+import cloud.ttest.share.core.application.GetByListWasteCenterAuthorizationRequest;
+import cloud.ttest.share.core.application.GetByListWasteCenterAuthorizationResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.http.HttpStatus;
@@ -32,7 +32,7 @@ public class WasteCenterAuthorizationQueryController {
     public ResponseEntity<MessagePaginatedResponse> getAll(
             @RequestParam(defaultValue = "0") Integer pageNo,
             @RequestParam(defaultValue = "20") Integer pageSize,
-            @RequestParam(defaultValue = "address") String sortBy,
+            @RequestParam(defaultValue = "authorizationNumber") String sortBy,
             @RequestParam(defaultValue = "asc") String sortType) {
         GetAllWasteCenterAuthorizationQuery query = new GetAllWasteCenterAuthorizationQuery(pageNo,pageSize,sortBy,sortType);
         MessagePaginatedResponse pageResponse = mediator.send(query);
@@ -46,13 +46,13 @@ public class WasteCenterAuthorizationQueryController {
         return ResponseEntity.ok(new ApiResponse2xx<>(response, HttpStatus.OK));
     }
 
-    @GetMapping("/list")
-    public ResponseEntity<ApiResponse2xx<GetByListWasteCenterAuthorizationResponse>> getById(
+    @PostMapping("/list")
+    public ResponseEntity<GetByListWasteCenterAuthorizationResponse> getById(
             @RequestBody GetByListWasteCenterAuthorizationRequest request
     ) {
         GetByListWasteCenterAuthorizationQuery query = new GetByListWasteCenterAuthorizationQuery(request.getIds());
         GetByListWasteCenterAuthorizationResponse response = mediator.send(query);
-        return ResponseEntity.ok(new ApiResponse2xx<>(response, HttpStatus.OK));
+        return ResponseEntity.ok(response);
     }
 
 

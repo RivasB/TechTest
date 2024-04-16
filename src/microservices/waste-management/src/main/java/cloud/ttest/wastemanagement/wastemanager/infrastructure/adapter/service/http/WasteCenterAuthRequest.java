@@ -4,7 +4,11 @@ import java.util.List;
 
 public class WasteCenterAuthRequest {
 
-    private final List<Long> ids;
+    private List<Long> ids;
+
+
+    public WasteCenterAuthRequest() {
+    }
 
     public WasteCenterAuthRequest(List<Long> ids) {
         this.ids = ids;
