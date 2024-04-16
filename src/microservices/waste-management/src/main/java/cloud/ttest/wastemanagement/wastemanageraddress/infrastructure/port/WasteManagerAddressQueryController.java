@@ -29,7 +29,7 @@ public class WasteManagerAddressQueryController {
     public ResponseEntity<MessagePaginatedResponse> getAll(
             @RequestParam(defaultValue = "0") Integer pageNo,
             @RequestParam(defaultValue = "20") Integer pageSize,
-            @RequestParam(defaultValue = "name") String sortBy,
+            @RequestParam(defaultValue = "address") String sortBy,
             @RequestParam(defaultValue = "asc") String sortType) {
         GetAllWasteManagerAddressQuery query = new GetAllWasteManagerAddressQuery(pageNo,pageSize,sortBy,sortType);
         MessagePaginatedResponse pageResponse = mediator.send(query);

@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -28,7 +29,7 @@ public class WasteCenterAuthHttpClientImpl implements IWasteCenterAuthHttpClient
         }
         catch(Exception e){
             logger.error(String.format("Unable to get authorization numbers. %s ",e.getMessage()));
-            throw new HttpClientErrorException();
+            return new ArrayList<>();
         }
     }
 }
