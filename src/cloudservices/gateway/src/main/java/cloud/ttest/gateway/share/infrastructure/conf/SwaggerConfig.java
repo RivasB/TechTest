@@ -3,6 +3,11 @@ package cloud.ttest.gateway.share.infrastructure.conf;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.swagger.v3.oas.models.Components;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Contact;
+import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.info.License;
 import org.springdoc.core.GroupedOpenApi;
 import org.springdoc.core.SwaggerUiConfigParameters;
 import org.springdoc.core.SwaggerUiConfigProperties;
@@ -32,6 +37,19 @@ public class SwaggerConfig implements WebFluxConfigurer {
                     groups.add(api);
                 });
         return groups;
+    }
+
+    @Bean
+    public OpenAPI customOpenAPI() {
+        return new OpenAPI()
+                .components(new Components())
+                .info(new Info()
+                        .title("Agencia Virtual API")
+                        .description("Documentation Agencia Virtual API v1.0")
+                        .termsOfService("terms")
+                        .contact(new Contact().email("@identity.dev"))
+                        .license(new License().name("GNU"))
+                        .version("v1.0"));
     }
 
     @Bean
