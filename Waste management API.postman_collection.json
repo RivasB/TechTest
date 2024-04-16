@@ -1,0 +1,838 @@
+{
+	"info": {
+		"_postman_id": "0dfc46b0-1e01-46dd-8284-1df07738c455",
+		"name": "Waste management API",
+		"description": "Contact Support:\n Email: @project.dev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27503577"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "wastemanager",
+					"item": [
+						{
+							"name": "address",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "get By Id 1",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/wastemanager/address/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"wastemanager",
+														"address",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<long>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "http://172.22.0.1:8084/api/wastemanager/address/:id",
+															"protocol": "http",
+															"host": [
+																"172",
+																"22",
+																"0",
+																"1"
+															],
+															"port": "8084",
+															"path": [
+																"api",
+																"wastemanager",
+																"address",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"timestamp\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"message\": \"<string>\",\n  \"errors\": \"<string>\",\n  \"data\": {\n    \"id\": \"<long>\",\n    \"address\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  }\n}"
+												}
+											]
+										},
+										{
+											"name": "update 3",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/wastemanager/address/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"wastemanager",
+														"address",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<long>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "http://172.22.0.1:8084/api/wastemanager/address/:id",
+															"protocol": "http",
+															"host": [
+																"172",
+																"22",
+																"0",
+																"1"
+															],
+															"port": "8084",
+															"path": [
+																"api",
+																"wastemanager",
+																"address",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"timestamp\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"message\": \"<string>\",\n  \"errors\": \"<string>\",\n  \"data\": {\n    \"message\": \"<string>\"\n  }\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "get All 1",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/wastemanager/address?pageNo=0&pageSize=20&sortBy=address&sortType=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"wastemanager",
+												"address"
+											],
+											"query": [
+												{
+													"key": "pageNo",
+													"value": "0"
+												},
+												{
+													"key": "pageSize",
+													"value": "20"
+												},
+												{
+													"key": "sortBy",
+													"value": "address"
+												},
+												{
+													"key": "sortType",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "http://172.22.0.1:8084/api/wastemanager/address?pageNo=0&pageSize=20&sortBy=address&sortType=asc",
+													"protocol": "http",
+													"host": [
+														"172",
+														"22",
+														"0",
+														"1"
+													],
+													"port": "8084",
+													"path": [
+														"api",
+														"wastemanager",
+														"address"
+													],
+													"query": [
+														{
+															"key": "pageNo",
+															"value": "0"
+														},
+														{
+															"key": "pageSize",
+															"value": "20"
+														},
+														{
+															"key": "sortBy",
+															"value": "address"
+														},
+														{
+															"key": "sortType",
+															"value": "asc"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"timestamp\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"message\": \"<string>\",\n  \"errors\": \"<string>\",\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"pageElements\": \"<integer>\",\n  \"pageLimit\": \"<integer>\",\n  \"pageNumber\": \"<integer>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "update 1",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"address\": \"<string>\",\n  \"enabled\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/wastemanager/address"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": \"<long>\",\n  \"address\": \"<string>\",\n  \"enabled\": \"<boolean>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": "http://172.22.0.1:8084/api/wastemanager/address"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"timestamp\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"message\": \"<string>\",\n  \"errors\": \"<string>\",\n  \"data\": {\n    \"message\": \"<string>\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "create 1",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"address\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/wastemanager/address"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"address\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": "http://172.22.0.1:8084/api/wastemanager/address"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"timestamp\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"message\": \"<string>\",\n  \"errors\": \"<string>\",\n  \"data\": {\n    \"message\": \"<string>\"\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "get By Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/wastemanager/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"wastemanager",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "http://172.22.0.1:8084/api/wastemanager/:id",
+													"protocol": "http",
+													"host": [
+														"172",
+														"22",
+														"0",
+														"1"
+													],
+													"port": "8084",
+													"path": [
+														"api",
+														"wastemanager",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"timestamp\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"message\": \"<string>\",\n  \"errors\": \"<string>\",\n  \"data\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"nif\": \"<string>\",\n    \"address\": {\n      \"id\": \"<long>\",\n      \"address\": \"<string>\",\n      \"enabled\": \"<boolean>\"\n    },\n    \"wasteCenterAuthorizationNumbers\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"enabled\": \"<boolean>\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "update 2",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/wastemanager/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"wastemanager",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "http://172.22.0.1:8084/api/wastemanager/:id",
+													"protocol": "http",
+													"host": [
+														"172",
+														"22",
+														"0",
+														"1"
+													],
+													"port": "8084",
+													"path": [
+														"api",
+														"wastemanager",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"timestamp\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"message\": \"<string>\",\n  \"errors\": \"<string>\",\n  \"data\": {\n    \"message\": \"<string>\"\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "get All",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/wastemanager?pageNo=0&pageSize=20&sortBy=name&sortType=asc",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"wastemanager"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "0"
+										},
+										{
+											"key": "pageSize",
+											"value": "20"
+										},
+										{
+											"key": "sortBy",
+											"value": "name"
+										},
+										{
+											"key": "sortType",
+											"value": "asc"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "http://172.22.0.1:8084/api/wastemanager?pageNo=0&pageSize=20&sortBy=name&sortType=asc",
+											"protocol": "http",
+											"host": [
+												"172",
+												"22",
+												"0",
+												"1"
+											],
+											"port": "8084",
+											"path": [
+												"api",
+												"wastemanager"
+											],
+											"query": [
+												{
+													"key": "pageNo",
+													"value": "0"
+												},
+												{
+													"key": "pageSize",
+													"value": "20"
+												},
+												{
+													"key": "sortBy",
+													"value": "name"
+												},
+												{
+													"key": "sortType",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"timestamp\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"message\": \"<string>\",\n  \"errors\": \"<string>\",\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"pageElements\": \"<integer>\",\n  \"pageLimit\": \"<integer>\",\n  \"pageNumber\": \"<integer>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"nif\": \"<string>\",\n  \"address\": \"<string>\",\n  \"wasteCenterAuthorizationNumbers\": [\n    \"<long>\",\n    \"<long>\"\n  ],\n  \"enabled\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/api/wastemanager"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"nif\": \"<string>\",\n  \"address\": \"<string>\",\n  \"wasteCenterAuthorizationNumbers\": [\n    \"<long>\",\n    \"<long>\"\n  ],\n  \"enabled\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/wastemanager"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"timestamp\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"message\": \"<string>\",\n  \"errors\": \"<string>\",\n  \"data\": {\n    \"message\": \"<string>\"\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"address\": \"<string>\",\n  \"name\": \"<string>\",\n  \"nif\": \"<string>\",\n  \"wasteCenterAuthorizationNumbers\": [\n    \"<long>\",\n    \"<long>\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/api/wastemanager"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"address\": \"<string>\",\n  \"name\": \"<string>\",\n  \"nif\": \"<string>\",\n  \"wasteCenterAuthorizationNumbers\": [\n    \"<long>\",\n    \"<long>\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/wastemanager"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"timestamp\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"message\": \"<string>\",\n  \"errors\": \"<string>\",\n  \"data\": {\n    \"message\": \"<string>\"\n  }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8091/waste-management"
+		}
+	]
+}
