@@ -3,6 +3,7 @@ package cloud.ttest.gateway.share.infrastructure.conf;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
@@ -21,6 +22,7 @@ import org.springframework.web.reactive.config.ResourceHandlerRegistry;
 import org.springframework.web.reactive.config.WebFluxConfigurer;
 
 @Configuration
+@OpenAPIDefinition
 public class SwaggerConfig implements WebFluxConfigurer {
 
     @Bean
