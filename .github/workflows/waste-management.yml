@@ -2,7 +2,7 @@ name: ci-wastemanagement
 
 env:
   KUBECONFIG: ./kubeconfig.yaml
-  SERVICE_PATH: 'src/microservices/wastemanagement'
+  SERVICE_PATH: 'src/microservices/waste-management'
   SERVICE_NAME: 'waste-management'
 
 on:
@@ -10,8 +10,8 @@ on:
     branches:
       - 'main'
     paths:
-      - .github/workflows/wastemanagement.yml
-      - 'src/microservices/wastemanagement/**'
+      - .github/workflows/waste-management.yml
+      - 'src/microservices/waste-management/**'
 
 jobs:
   build-push:
