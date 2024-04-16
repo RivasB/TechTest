@@ -1,0 +1,495 @@
+{
+	"info": {
+		"_postman_id": "ab5f7967-288a-4784-a4fa-3477ee802612",
+		"name": "Waste Center Authorization API",
+		"description": "Contact Support:\n Email: @project.dev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27503577"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "authnumber",
+					"item": [
+						{
+							"name": "list",
+							"item": [
+								{
+									"name": "get By Id",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"ids\": [\n    \"<long>\",\n    \"<long>\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/authnumber/list"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"ids\": [\n    \"<long>\",\n    \"<long>\"\n  ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{baseUrl}}/api/authnumber/list"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"authorizationNumbers\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "get By Id 1",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/authnumber/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"authnumber",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/authnumber/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"authnumber",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"timestamp\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"message\": \"<string>\",\n  \"errors\": \"<string>\",\n  \"data\": {\n    \"id\": \"<long>\",\n    \"authorizationNumber\": \"<string>\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "update 1",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/authnumber/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"authnumber",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/authnumber/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"authnumber",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"timestamp\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"message\": \"<string>\",\n  \"errors\": \"<string>\",\n  \"data\": {\n    \"message\": \"<string>\"\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "get All",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/authnumber?pageNo=0&pageSize=20&sortBy=authorizationNumber&sortType=asc",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"authnumber"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "0"
+										},
+										{
+											"key": "pageSize",
+											"value": "20"
+										},
+										{
+											"key": "sortBy",
+											"value": "authorizationNumber"
+										},
+										{
+											"key": "sortType",
+											"value": "asc"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/authnumber?pageNo=0&pageSize=20&sortBy=authorizationNumber&sortType=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"authnumber"
+											],
+											"query": [
+												{
+													"key": "pageNo",
+													"value": "0"
+												},
+												{
+													"key": "pageSize",
+													"value": "20"
+												},
+												{
+													"key": "sortBy",
+													"value": "authorizationNumber"
+												},
+												{
+													"key": "sortType",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"timestamp\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"message\": \"<string>\",\n  \"errors\": \"<string>\",\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"pageElements\": \"<integer>\",\n  \"pageLimit\": \"<integer>\",\n  \"pageNumber\": \"<integer>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"authorizationNumber\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/api/authnumber"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"authorizationNumber\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/authnumber"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"timestamp\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"message\": \"<string>\",\n  \"errors\": \"<string>\",\n  \"data\": {\n    \"message\": \"<string>\"\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"authorizationNumber\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/api/authnumber"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"authorizationNumber\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/authnumber"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"timestamp\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"message\": \"<string>\",\n  \"errors\": \"<string>\",\n  \"data\": {\n    \"message\": \"<string>\"\n  }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8091/waste-center-auth"
+		}
+	]
+}
