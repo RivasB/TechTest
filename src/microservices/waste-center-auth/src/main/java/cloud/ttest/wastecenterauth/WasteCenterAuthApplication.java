@@ -1,15 +1,14 @@
-package cloud.ttest.gateway;
+package cloud.ttest.wastecenterauth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 
 @SpringBootApplication
-public class GatewayApplication {
+public class WasteCenterAuthApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GatewayApplication.class, args);
+		SpringApplication.run(WasteCenterAuthApplication.class, args);
 	}
 
 }
